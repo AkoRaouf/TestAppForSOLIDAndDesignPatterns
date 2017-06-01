@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="TestAppForSOLIDAndDesignPatterns.MvcApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="TestAppForSOLIDAndDesignPatterns.Web" Language="C#" %>

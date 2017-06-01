@@ -30,7 +30,7 @@ namespace TestAppForSOLIDAndDesignPatterns.Web.Controllers
             if (t == null) return View();
             t.TotalIncome = incomeDetails.TotalIncome;
             t.TotalDeduction = incomeDetails.TotalDeduction;
-            TaxCalculator taxCalculator = new TaxCalculator();
+            var taxCalculator = new TaxCalculator();
             ViewBag.TotalTax = taxCalculator.Calculate(t);
             return View("Index", incomeDetails);
         }
