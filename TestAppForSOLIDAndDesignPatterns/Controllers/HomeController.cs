@@ -1,16 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using TestAppForSOLIDAndDesignPatterns.Core.Core.OCP;
+using TestAppForSOLIDAndDesignPatterns.Web.Models;
 
-namespace TestAppForSOLIDAndDesignPatterns.Controllers
+namespace TestAppForSOLIDAndDesignPatterns.Web.Controllers
 {
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(IncomeDetails incomeDetails)
+        {
+            ICountryTaxCalculator t = null;
+            switch (incomeDetails.Countary)
+            {
+                case "USA":
+                    t = new TaxCalculatorForUs();
+                    break;
+                case "UK":
+                    t = new TaxCalculatorForUk();
+                    break;
+                case "IN":
+                    t = new TaxCalculatorForIn();
+                    break;
+            }
+            if (t == null) return View();
+            t.TotalIncome = incomeDetails.TotalIncome;
+            t.TotalDeduction = incomeDetails.TotalDeduction;
+            TaxCalculator taxCalculator = new TaxCalculator();
+            ViewBag.TotalTax = taxCalculator.Calculate(t);
+            return View("Index", incomeDetails);
         }
 
         public ActionResult About()

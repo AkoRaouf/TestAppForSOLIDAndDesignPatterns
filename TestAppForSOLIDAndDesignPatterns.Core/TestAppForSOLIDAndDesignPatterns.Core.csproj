@@ -41,6 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\OCP\ICountryTaxCalculator.cs" />
+    <Compile Include="Core\OCP\TaxCalculator.cs" />
+    <Compile Include="Core\OCP\TaxCalculatorForIn.cs" />
+    <Compile Include="Core\OCP\TaxCalculatorForUk.cs" />
+    <Compile Include="Core\OCP\TaxCalculatorForUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
