@@ -47,6 +47,12 @@
     <Compile Include="Core\OCP\TaxCalculatorForUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Core\OCP\OCPDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\LSP\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
