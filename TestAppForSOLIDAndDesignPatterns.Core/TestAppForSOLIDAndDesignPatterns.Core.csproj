@@ -48,9 +48,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Core\OCP\OCPDiagram.cd" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Core\LSP\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
