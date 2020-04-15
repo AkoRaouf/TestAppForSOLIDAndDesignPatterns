@@ -10,4 +10,8 @@
     <None Remove="Core\lsp\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Behavioral\" />
+  </ItemGroup>
+
 </Project>
